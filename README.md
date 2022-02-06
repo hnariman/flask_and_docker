@@ -16,9 +16,7 @@ $ docker-compose down
 ```
 
 ### Description
-A sample to reveal the ease and speed of sample API development with Docker & Flask
+A sample, in educational purposes to reveal ease and speed of API dev with Docker & Flask
 
-Also advosry for Dockerfile and docker-compose setup with better performance & cost
-
-
+Dockerfile and docker-compose are optimized for better performance & cost
 
