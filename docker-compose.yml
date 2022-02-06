@@ -1,0 +1,31 @@
+version: '3'
+services:
+  api:
+    container_name: flask-api
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: on-failure
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 100M
+        reservations:
+          cpus: '0.5'
+          memory: 100M
+    ports:
+      - target: 8080
+        published: 4343
+        protocol: tcp
+        mode: host
+
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:4343"]
+      interval: 1m30s
+      timeout: 10s
+      retries: 2
+      start_period: 10s
+
+        # test: curl -f http://localhost:4343 || exit 1
+
