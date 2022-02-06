@@ -15,7 +15,7 @@ services:
           cpus: '0.5'
           memory: 100M
     ports:
-      - target: 8080
+      - target: 4343
         published: 4343
         protocol: tcp
         mode: host
